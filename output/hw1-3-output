@@ -1,0 +1,55 @@
+tcp/udp server output
+========================
+
+nandan@nandan:~/workspace/cmpe207/hw1$ gcc hw1-3server.c -o hw1-3server
+nandan@nandan:~/workspace/cmpe207/hw1$ ./hw1-3server
+tcp fd : 3
+rusage: 0
+tcp bind sucess
+tcp socket is listening on port 22000...
+udp socket : 4
+udp  binding success ...
+ resource usage = 2868
+Echoing back - tcp
+ sending server resource usage to tcp client
+ echoing back to udp client:
+ sending server resource usage to udp client
+
+
+
+
+TCP client out
+===============
+ 
+nandan@nandan:~/workspace/cmpe207/hw1$ gcc hw1-3server.c -o hw1-3server
+nandan@nandan:~/workspace/cmpe207/hw1$ ./hw1-3server
+tcp fd : 3
+rusage: 0
+tcp bind sucess
+tcp socket is listening on port 22000...
+udp socket : 4
+udp  binding success ...
+ resource usage = 2868
+Echoing back - tcp
+ sending server resource usage to tcp client
+ echoing back to udp client:
+ sending server resource usage to udp client
+
+UDP clinet output
+=================
+
+nandan@nandan:~/workspace/cmpe207/hw1$ ./hw1-3-udpclient
+Type Something...
+udp
+ udp server echo:
+servers resource usage:
+ 0
+ 0
+ 2
+ 1
+ 0
+ 0
+ 0
+ 1
+ 1
+Type Something...

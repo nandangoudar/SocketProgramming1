@@ -1,0 +1,7 @@
+nandan@nandan:~/workspace/sample_concurrent$ ./hw1-1 
+I am a child: 1 PID: 25274
+I am a child: 2 PID: 25275
+I am a child: 3 PID: 25276
+I am a child: 5 PID: 25278
+I am a child: 4 PID: 25277
+
