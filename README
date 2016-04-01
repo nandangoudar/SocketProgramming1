@@ -1,0 +1,51 @@
+Name: Goudar, Nandan
+SID: 009994452
+
+References:
+
+
+> http://www.shsu.edu/csc_tjm/fall2000/cs431/shell-lab.html
+
+> http://www.ece.tamu.edu/~reddy/ee602_00/socket_tutorial.pdf
+
+> http://www.prasannatech.net/search/label/Socket%20Programming
+
+> http://www.binarytides.com/server-client-example-c-sockets-linux/
+
+> UNIX Network Programming, Volume 1
+ By W. Richard Stevens, Bill Fenner, Andrew M. Rudoff
+
+> http://ftp.sas.com/techsup
+
+how to compile
+1. go to the directory of the c file saved
+2.enter command "gcc <filename>.c -o filename" to creat executable file
+3. now execute command "./filename"
+
+Each program detail
+
+HW1-1) program1
+In this code main() code calls a funtion with integer n, this function will take integer n and trigger child process, each child  process will print something and its PID. so this fucntion will call child process n number of time.
+
+HW1-2) program2
+
+In this execv fucntion is used to execute the code. this execv function is called in child process . so we create child process, check condtion for child process.
+the execv function is only called in child process to execute another c code which does the summation of the numbers.
+
+HW1-3) program3
+tcp/udp server:
+in one program both tcp and udp server are implemented. we creat and socket for tcp/udp and create bind.
+get resource usage of the server by using getrusage() system call and store them in some array.
+once both sockets are up and tcp is in listening. we use select function. fill up the fd_set struct with all the socket file descriptor we want to monitor for data. 
+call select function is used to monitor the whether if any data is available on the socket, and keep checking until any data avaialablle on any of the socket.
+and  if any data is available in any of the sockets assigned to fd_set parameters by reference, then check the reason because of which select woke with return value with FD_ISSET() fucntion , if the reason for select() return is because if tcp file descriptor then tcp server part accpets connnection and does the read write accordingly., if the reason for select to return with value is because of udp socket file descriptor then udp server part of code is run ( recvfrom and sendto)to exchange data.
+when tcp/udp client send any message the server echoes the message and sends the resourceusage data.
+
+HW1-4) program4
+
+make sure fingerd deamon is running on the linux
+write a tcp client which connect to 127.0.0.1 , create socket, connect to server.
+Ask for argument to be passed. get the entered argument and send it to the finger server and append the query argument with "CRLF" which is the end charater for the fingerd query. once argument is sent to server , server replies back with the response and read the response in a loop of value of read(response from server)
+and printing the response and reading it in char array.
+
+
